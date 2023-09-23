@@ -8,7 +8,7 @@ def generate_monthly_budget_float(month):
     for _ in range(num_transactions):
         day = np.random.randint(1, 29)
         expense_type = np.random.choice(expense_types)
-        value = np.random.uniform(10, 2000)
+        value = np.random.uniform(10, 575)
         observation = f"{expense_type} {month} {day}"
         payer = f"Pessoa {np.random.randint(1, 3)}"
         
@@ -16,7 +16,7 @@ def generate_monthly_budget_float(month):
     
     # Guaranteeing at least one investment per month
     day = np.random.randint(1, 29)
-    value = np.random.uniform(100, 2000)
+    value = np.random.uniform(100, 575)
     observation = f"Investimento {month} {day}"
     payer = f"Pessoa {np.random.randint(1, 3)}"
     data.append([f"{day}/{month[:3]}/2023", "Investimento (aporte)", value, observation, payer])
